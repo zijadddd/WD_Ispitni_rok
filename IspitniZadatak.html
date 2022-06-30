@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<style>
+	*{
+		box-sizing: border-box;
+	}
+.sve{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+.lijevi{
+display: inline-block;
+position: relative;
+float: left;
+width: 40%;
+height: 100%;
+background-color: lightblue;
+padding: 2%;
+}
+.desni{
+display: inline-block;
+position: relative;
+
+width: 60%;
+height: 100%;
+background-color: azure;
+padding: 2%;
+}
+.zaSliku{
+	height: 60%;
+	width: 100%;
+}
+</style>
+</head>
+
+<body>
+
+<div class="sve">
+	<div class="lijevi">
+			<button onclick="">Ucitaj proizvode</button>
+		<table style="width:100%;table-layout:fixed" id="podaciTabela" border="1px">
+			<tr>
+				<th>ID Proizvoda</th>
+				<th>Naziv</th>
+				<th>Detalji</th>
+			</tr>
+		
+		</table>
+	</div>
+	<div class="desni">
+		<div class="zaSliku">
+			
+			<p>Mjesto za sliku proizvoda</p>
+			<img ID="slika"src="jezero.jpg" alt="Nema slike" width="100%" height="80%">
+
+		</div>
+		<h3 ID="Cijena">Ovdje smjestiti cijenu proizvoda</h3>
+		<h3 ID="Razlika">Ovdje smjestiti razliku u cijeni izabranog i najskupljeg proizvoda</h3>
+
+		<button onclick="">Razlika u cijeni</button>
+
+	</div>
+</div>
+
+
+
+</body>
+
+</html>
