@@ -32,16 +32,11 @@ const ucitajProizvode = () => {
 const prikaziDetalje = (ID) => {
     let temp = proizvodi.find(x => x.proizvodID === ID);
 
-    document.querySelector('#container__second').innerHTML = `
-        <p>Mjesto za sliku proizvoda</p>
-        <img src="${temp.slikaUrl}">
-        <p>${temp.cijenaPoKvadratu} KM</p>
-        <p id="razlikaCijena"></p>
-        <p id="zaLajkove"></p>
-        <button onclick="izracunajRazliku(${temp.cijenaPoKvadratu})">Razlika u cijeni</button>
-        <button onclick="prikaziLajkove()">Proizvod sa najvise lajkova</button>
-    `;
-}
+    document.querySelector('#slika').src = `${temp.slikaUrl}`;
+    document.querySelector('#cijena').innerHTML = `${temp.cijenaPoKvadratu} KM`;
+    document.querySelector('#razlikaucijeni').setAttribute('onclick', `izracunajRazliku(${temp.cijenaPoKvadratu})`);
+    document.querySelector('#lajkovi').setAttribute('onclick', 'prikaziLajkove()');
+}    
 
 const izracunajRazliku = (cijenaTrenutna) => {
     let temp = 0;
